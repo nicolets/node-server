@@ -15,6 +15,7 @@ const server = http.createServer((req, res) => {
         return;
     }
     const content = fs.readFileSync(notFound);
+    res.statusCode = 404;
     res.end(content);
     return;
 })
